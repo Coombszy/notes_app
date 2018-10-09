@@ -1,2 +1,2 @@
 # notes_app
-Random Ruby work
+Linked to project https://github.com/Coombszy/tdd-week1final
