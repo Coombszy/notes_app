@@ -2,7 +2,7 @@ require_relative 'note'
 
 class Notes_app
   private :add_note
-  def intialize
+  def initialize
     @stored_notes = Array.new 
   end
   def add_note(title, body)
