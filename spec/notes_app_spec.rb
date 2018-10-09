@@ -2,7 +2,7 @@ require 'notes_app'
 require 'note'
 
 describe Notes_app do
-  describe '#add_node' do #this method is now private so tests have been removed
+  describe '#add_note' do
     it 'responds to #add_note' do
       expect(subject).to respond_to(:add_note)
     end
@@ -20,8 +20,14 @@ describe Notes_app do
       subject.create_note_prompt
     end
   end
-end
-
-describe Note do
-    
+  describe '#list_all' do
+    it 'responds to #list' do
+      expect(subject).to respond_to(:list_all)
+    end
+    it 'lists notes' do
+      subject.add_note("testTitle","testBody")
+      expect(STDOUT).to receive(:puts).with('testTitle')
+      subject.list_all
+    end
+  end
 end
