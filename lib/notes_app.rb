@@ -1,7 +1,6 @@
 require_relative 'note'
 
 class Notes_app
-  private :add_note
   def initialize
     @stored_notes = Array.new 
   end
@@ -17,5 +16,11 @@ class Notes_app
     puts "And the body?"
     body = gets.chomp
     add_note(title, body)
+  end
+  
+  def list_all
+    @stored_notes.each do |note|
+      puts note.title
+    end
   end
 end
