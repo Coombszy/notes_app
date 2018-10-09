@@ -23,4 +23,10 @@ class Notes_app
       puts note.title
     end
   end
+  
+  def pick_note(target_title)
+    note = (@stored_notes.select { |a_note| a_note.title == target_title  })[0]
+    puts note.title
+    puts note.body
+  end
 end
