@@ -1,7 +1,10 @@
-require_relative ''
+require_relative 'note'
 
-class Notes_app do
+class Notes_app
     def intialize
        @stored_notes = Array.new 
+    end
+    def add_note
+        
     end
 end
